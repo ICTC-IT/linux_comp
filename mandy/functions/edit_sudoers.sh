@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# COLOR VARIABLES
+RED='\033[0;31m'
+NC='\033[0m'
+CYAN='\033[0;36m'
+YELLOW='\033[0;33m'
+GREEN='\033[0;32m'
+
+edit_sudoers(){
+	echo
+	printf "${YELLOW}Opening the sudoers file for editing${NC}: \n"
+	export EDITOR=nano
+	sudo nano /etc/sudoers
+	echo
+}
