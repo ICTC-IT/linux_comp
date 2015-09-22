@@ -4,22 +4,14 @@
 Made by Jackson Brown, Blake Holloway
 Last Update: September, 22, 2015
 
- __  __                 _       
-|  \/  | __ _ _ __   __| |_   _ 
-| |\/| |/ _` | '_ \ / _` | | | |
-| |  | | (_| | | | | (_| | |_| |
-|_|  |_|\__,_|_| |_|\__,_|\__, |
-                          |___/ 
-
-
 for Mason, our dearest love
 
-DESCRIPTION:
+# DESCRIPTION
 
 The Mandy Console is an all purpose console made as a control panel and productivity enhancer  for the Linux command line. The Mandy Console comes with a growing variety of options (which can be viewed with “help”). All of the options so far have been programmed to aid with the Cyber Patriot competition (more options to further enhance the productivity of the Linux Administrator will be added later). Every option within the Mandy Console will be useful in the Cyber Patriot competition.
 
 
-USAGE:
+# USAGE
 
 As root user(reccomended):
 sudo bash mandy
