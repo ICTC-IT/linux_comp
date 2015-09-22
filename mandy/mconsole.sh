@@ -61,6 +61,9 @@ source functions/removeage.sh
 ## EDIT SUDOERS IMPORT
 source functions/edit_sudoers.sh
 
+## SHOW GROUP USERS IMPORT
+source functions/show_group_users.sh
+
 
 clear
 
@@ -112,9 +115,6 @@ run_case(){
 		"block")
 			show_blk
 			;;
-		"clear")
-			clear
-			;;
 		"ports")
 			show_open_ports
 			;;
@@ -137,6 +137,10 @@ run_case(){
 		"editsudo")
 			edit_sudoers
 			;;
+		"groupsee")
+			prompt_show_group_users
+			show_group_users
+			;;
 		*)
 			if [ "$option" == "exit" ]; then
 			echo "Exiting Mandy"
@@ -150,6 +154,14 @@ run_case(){
 		## END CASE
 }
 
+add_common_cmd(){
+	case $option in
+		"clear")
+			clear
+			;;
+	esac
+}
+
 
 # FUNCTION CALLING
 
@@ -159,11 +171,14 @@ print
 ## CALL SECONDARY PROMPT FUNCTION
 prompt2
 
-## CALL RUN CASE FUNCTION
+## CALL RUN_CASE/ADD_COMMON_CMD FUNCTIONS
 run_case
+add_common_cmd
 
 # ENDING LOOP
 done
 
 # LEAVING WITH EXIT 0 CODE
 exit 0
+
+# cut -d: -f1 /etc/group

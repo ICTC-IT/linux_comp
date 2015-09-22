@@ -16,7 +16,7 @@ prompt(){
 	echo "type \"help\" for options."
 	echo
 	echo "Made by Jackson Brown, Blake Holloway"
-	printf "${CYAN}Last update: september, 22, 2k15${NC} \n"
+	printf "${CYAN}Last update: september, 22, 2015${NC} \n"
 	echo
 	echo "COLOR CODING: "
 	printf "${GREEN}green${NC}: command input \n"

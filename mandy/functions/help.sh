@@ -45,4 +45,6 @@ help_info(){
 	echo
 	printf "${CYAN}editsudo${NC}: edits the /etc/sudoers file \n"
 	echo
+	printf "${CYAN}groupsee${NC}: view all of the users in a specified group \n"
+	echo
 }
