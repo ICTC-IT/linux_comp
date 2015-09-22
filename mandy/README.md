@@ -20,7 +20,7 @@ As a normal user:
 bash mandy
 
 
-Help Display:
+# Help Display
 
 show: displays the system info 
 
