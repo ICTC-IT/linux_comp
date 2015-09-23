@@ -12,5 +12,13 @@ disable_ubuntu_guest(){
     echo "$allow-guest=false" >> /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf
     echo "$allow-guest=false" >> /usr/share/lightdm/lightdm.conf
     echo "OK."
+
+    ## LOG UPDATER
+    echo >> log.txt
+    echo "`date`" >> log.txt
+    echo "Removed guest account via MANDY, entry \"ubuntudisable\"." >> log.txt
+    echo "Commands Executed: echo \"$allow-guest=false\" >> /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf" >> log.txt
+    echo "Commands Executed: echo \"$allow-guest=false\" >> /usr/share/lightdm/lightdm.conf" >> log.txt
+    echo >> log.txt
 }
 

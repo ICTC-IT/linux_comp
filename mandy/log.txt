@@ -1,0 +1,10 @@
+
+Wed Sep 23 14:48:34 CDT 2015
+Opened the sudoers file via MANDY, entry "editsudo"
+export EDITOR=nano
+sudo nano /etc/sudoers
+
+
+Removed sudo users via MANDY, entry "removeage".
+Commands Executed: sudo chage -M 40 USER_VAR
+

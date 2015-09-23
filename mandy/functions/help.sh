@@ -47,4 +47,8 @@ help_info(){
 	echo
 	printf "${CYAN}groupsee${NC}: view all of the users in a specified group \n"
 	echo
+	printf "${CYAN}changepass${NC}: change password of specified 5 users \n"
+	echo
+	printf "${CYAN}editsudoremove${NC}: remove specified 5 users from the sudo group \n"
+	echo
 }

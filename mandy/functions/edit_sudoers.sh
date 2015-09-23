@@ -13,4 +13,13 @@ edit_sudoers(){
 	export EDITOR=nano
 	sudo nano /etc/sudoers
 	echo
+
+	## LOG UPDATER
+	echo >> log.txt
+	echo "`date`" >> log.txt
+	echo "Opened the sudoers file via MANDY, entry \"editsudo\"" >> log.txt
+	echo "Commands Executed: export EDITOR=nano" >> log.txt
+	echo "Commands Executed: sudo nano /etc/sudoers" >> log.txt
+	echo >> log.txt
+
 }

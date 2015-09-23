@@ -9,5 +9,21 @@ GREEN='\033[0;32m'
 
 # CREATE UPDATE SYSTEM FUNCTION
 update_sys(){
-	if (printf "${RED}`sudo apt-get update`${NC} \n"); then printf "${RED}`sudo apt-get upgrade`${NC} \n"; fi
+	echo
+	printf "${CYAN}The updates will automatically be installed, continue (y/n)?${NC} \n"
+	read option_update
+	echo
+	if [ $option_update = "y" ]; then
+		printf "${YELLOW}Running update: \n"
+		if (printf "${RED}`sudo apt-get --yes --force-yes update`${NC} \n");
+			echo
+			printf "${YELLOW}Running upgrade: \n"
+			then 
+				printf "${RED}"
+					sudo apt-get --yes --force-yes upgrade
+				printf "${NC} \n";
+		fi
+	else
+		printf "${YELLOW}Option other than \"y\" specified, update cancelled.${NC}"
+	fi
 }

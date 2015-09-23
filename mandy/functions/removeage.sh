@@ -11,11 +11,11 @@ GREEN='\033[0;32m'
 prompt_age(){
 	echo
 	printf "${YELLOW}Enter users for chage (five entries total, type \"done\" if an entry is blank)${NC}: \n"
-	read option_one
-	read option_two
-	read option_three
-	read option_four
-	read option_five
+	read option_one_age
+	read option_two_age
+	read option_three_age
+	read option_four_age
+	read option_five_age
 
 	echo
 	echo
@@ -23,55 +23,55 @@ prompt_age(){
 
 ## CONDITIONAL TEST FUNCTION FOR OPTION VARIABLES
 conditional_test_age(){
-	if [ -z "$option_one" ] || [ $option_one = "done" ];
+	if [ -z "$option_one_age" ] || [ $option_one_age = "done" ];
 		then
 		echo "option skipped.";
 		else
 		printf "${YELLOW}changing $option_one expiration${NC}: \n"
-		if(printf "${RED}`sudo chage -M 30 $option_one`${NC}"); then
+		if(printf "${RED}`sudo chage -M 30 $option_one_age`${NC}"); then
 			echo "OK."
 		fi
 	fi
 
-	if [ -z "$option_two" ] || [ $option_two = "done" ];
+	if [ -z "$option_two_age" ] || [ $option_two_age = "done" ];
 		then
 		echo "option skipped.";
 		else
 		printf "${YELLOW}changing $option_two expiration${NC}: \n"
-		if(printf "${RED}`sudo chage -M 30 $option_two`${NC}"); then
+		if(printf "${RED}`sudo chage -M 30 $option_two_age`${NC}"); then
 			echo "OK."
 		fi
 		echo "OK.";
 	fi
 
-	if [ -z "$option_three" ] || [ $option_three = "done" ];
+	if [ -z "$option_three_age" ] || [ $option_three_age = "done" ];
 		then
 		echo "option skipped.";
 		else
 		printf "${YELLOW}changing $option_three expiration${NC}: \n"
-		if(printf "${RED}`sudo chage -M 30 $option_three`${NC}"); then
+		if(printf "${RED}`sudo chage -M 30 $option_three_age`${NC}"); then
 			echo "OK."
 		fi
 		echo "OK.";
 	fi
 
-	if [ -z "$option_four" ] || [ $option_four = "done" ];
+	if [ -z "$option_four_age" ] || [ $option_four_age = "done" ];
 		then
 		echo "option skipped.";
 		else
 		printf "${YELLOW}changing $option_four expiration${NC}: \n"
-		if(printf "${RED}`sudo chage -M 30 $option_four`${NC}"); then
+		if(printf "${RED}`sudo chage -M 30 $option_four_age`${NC}"); then
 			echo "OK."
 		fi
 		echo "OK.";
 	fi
 
-	if [ -z "$option_five" ] || [ $option_five = "done" ];
+	if [ -z "$option_five_age" ] || [ $option_five_age = "done" ];
 		then
 		echo "option skipped.";
 		else
 		printf "${YELLOW}changing $option_five expiration${NC}: \n"
-		if(printf "${RED}`sudo chage -M 30 $option_five`${NC}"); then
+		if(printf "${RED}`sudo chage -M 30 $option_five_age`${NC}"); then
 			echo "OK."
 		fi
 		echo "OK.";
@@ -79,4 +79,11 @@ conditional_test_age(){
 
 	echo
 	echo
+
+    ## LOG UPDATER
+    echo >> log.txt
+    echo "`date`" >> log.txt
+    echo "Removed sudo users via MANDY, entry \"removeage\"." >> log.txt
+    echo "Commands Executed: sudo chage -M 40 USER_VAR" >> log.txt
+    echo >> log.txt
 }

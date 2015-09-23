@@ -64,9 +64,14 @@ source functions/edit_sudoers.sh
 ## SHOW GROUP USERS IMPORT
 source functions/show_group_users.sh
 
+## CHANGE USER PASS FUNCTION IMPORT
+source functions/secure_user_pass.sh
+
+# SETTING NECESSARY ALIASES
+#alias cdm="cd"
+#shopt -s expand_aliases
 
 clear
-
 
 ## PROMPT CALL
 prompt
@@ -105,6 +110,7 @@ run_case(){
 			;;
 		"directory")
 			show_dir
+			line_count_condition
 			;;
 		"ram")
 			show_free
@@ -141,12 +147,19 @@ run_case(){
 			prompt_show_group_users
 			show_group_users
 			;;
+		"changepass")
+			prompt_pass
+			conditional_test_pass
+			;;
+		"editsudoremove")
+			prompt_group
+			conditional_test_group
+			;;
 		*)
 			if [ "$option" == "exit" ]; then
 			echo "Exiting Mandy"
 			echo
 			else
-			echo "Entry not found."
 			echo
 			fi
 			;;
@@ -159,6 +172,14 @@ add_common_cmd(){
 		"clear")
 			clear
 			;;
+		"ls")
+			ls
+			echo
+		;;
+		"pwd")
+			pwd
+			echo
+		;;
 	esac
 }
 
@@ -180,5 +201,3 @@ done
 
 # LEAVING WITH EXIT 0 CODE
 exit 0
-
-# cut -d: -f1 /etc/group

@@ -11,55 +11,55 @@ delete_user(){
 
 	echo
 	echo "Enter usernames (there are five entries in total, type \"done\" on the extra entries): "
-	read option_one
-	read option_two
-	read option_three
-	read option_four
-	read option_five
+	read option_one_del
+	read option_two_del
+	read option_three_del
+	read option_four_del
+	read option_five_del
 
 	echo
 
-	if [ -z "$option_one" ] || [ $option_one = "done" ];
+	if [ -z "$option_one_del" ] || [ $option_one_del = "done" ];
 		then echo "0: option one not set, skipping.";
 		else
-			printf "${YELLOW}Removing user $option_one${NC}:"
-			if(printf "${RED}`sudo userdel $option_one`${NC} \n"); then
+			printf "${YELLOW}Removing user $option_one_del${NC}:"
+			if(printf "${RED}`sudo userdel $option_one_del`${NC} \n"); then
 				echo "OK."
 			fi
 	fi
 
-	if [ -z "$option_two" ] || [ $option_two = "done" ];
+	if [ -z "$option_two_del" ] || [ $option_two_del = "done" ];
 		then echo "1: option two not set, skipping.";
 		else 
-			printf "${YELLOW}Removing user $option_two${NC}:"
-			if(printf "${RED}`sudo userdel $option_two`${NC} \n"); then
+			printf "${YELLOW}Removing user $option_two_del${NC}:"
+			if(printf "${RED}`sudo userdel $option_two_del`${NC} \n"); then
 				echo "OK."
 			fi
 	fi
 
-	if [ -z "$option_three" ] || [ $option_three = "done" ];
+	if [ -z "$option_three_del" ] || [ $option_three_del = "done" ];
 		then echo "2: option three not set, skipping.";
 		else
-			printf "${YELLOW}Removing user $option_three${NC}:"
-			if(printf "${RED}`sudo userdel $option_three`${NC} \n"); then
+			printf "${YELLOW}Removing user $option_three_del${NC}:"
+			if(printf "${RED}`sudo userdel $option_three_del`${NC} \n"); then
 				echo "OK."
 			fi
 	fi
 
-	if [ -z "$option_four" ] || [ $option_four = "done" ];
+	if [ -z "$option_four_del" ] || [ $option_four_del = "done" ];
 		then echo "3: option four not set, skipping.";
 		else
-			printf "${YELLOW}Removing user $option_four${NC}:"
-			if(printf "${RED}`sudo userdel $option_four`${NC} \n"); then
+			printf "${YELLOW}Removing user $option_four_del${NC}:"
+			if(printf "${RED}`sudo userdel $option_four_del`${NC} \n"); then
 				echo "OK"
 			fi
 	fi
 
-	if [ -z "$option_five" ] || [ $option_five = "done" ];
+	if [ -z "$option_five_del" ] || [ $option_five_del = "done" ];
 		then echo "4: option five not set, skipping.";
 		else
-			printf "${YELLOW}Removing user $option_five${NC}:"
-			if(printf "${RED}`sudo userdel $option_five`${NC} \n"); then
+			printf "${YELLOW}Removing user $option_five_del${NC}:"
+			if(printf "${RED}`sudo userdel $option_five_del`${NC} \n"); then
 				echo "OK"
 			fi
 	fi

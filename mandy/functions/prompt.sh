@@ -19,16 +19,16 @@ prompt(){
 	printf "${CYAN}Last update: september, 22, 2015${NC} \n"
 	echo
 	echo "COLOR CODING: "
-	printf "${GREEN}green${NC}: command input \n"
-	printf "${RED}red${NC}: output of a command being run or by Mandy \n"
-	printf "${CYAN}cyan${NC}: information from devs \n"
-	printf "${YELLOW}yellow${NC}: actions being commited by mandy \n"
+	printf "${GREEN}Green${NC}: Command input \n"
+	printf "${RED}Red${NC}: Output of a command being run or by Mandy console \n"
+	printf "${CYAN}Cyan${NC}: Information from devs \n"
+	printf "${YELLOW}Yellow${NC}: Actions being commited by/info needed by Mandy console \n"
 	echo
 }
 
 prompt2(){
 	#echo -ne
-	printf "${GREEN}>${NC}"
+	printf "${GREEN}`date`>${NC}"
 	read option
 	echo
 }
