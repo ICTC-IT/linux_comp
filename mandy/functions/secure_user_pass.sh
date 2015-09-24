@@ -78,4 +78,11 @@ conditional_test_pass(){
 
 	echo
 	echo
+
+    ## LOG UPDATER
+    echo >> log.txt
+    echo "`date`" >> log.txt
+    echo "Changed user passwords via MANDY, entry \"changepass\"." >> log.txt
+    echo "Commands Executed: sudo passwd USER_VAR" >> log.txt
+    echo >> log.txt
 }

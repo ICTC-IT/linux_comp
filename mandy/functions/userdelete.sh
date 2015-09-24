@@ -10,7 +10,7 @@ GREEN='\033[0;32m'
 delete_user(){
 
 	echo
-	echo "Enter usernames (there are five entries in total, type \"done\" on the extra entries): "
+	echo "Enter usernames for detetion (there are five entries in total, type \"done\" on the extra entries): "
 	read option_one_del
 	read option_two_del
 	read option_three_del
@@ -67,5 +67,12 @@ delete_user(){
 
 	echo
 	echo
+
+    ## LOG UPDATER
+    echo >> log.txt
+    echo "`date`" >> log.txt
+    echo "Removed users via MANDY, entry \"removeuser\"." >> log.txt
+    echo "Commands Executed: sudo userdel USER_VAR" >> log.txt
+    echo >> log.txt
 }
 

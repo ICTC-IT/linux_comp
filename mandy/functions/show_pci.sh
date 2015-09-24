@@ -14,4 +14,10 @@ show_pci(){
 		echo "OK."
 	fi
 	echo
+
+    echo >> log.txt
+    echo "`date`" >> log.txt
+    echo "Views all devices connected by PCI via MANDY, entry \"update\"." >> log.txt
+    echo "Commands Executed: lspci" >> log.txt
+    echo >> log.txt
 }

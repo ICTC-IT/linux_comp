@@ -14,4 +14,10 @@ show_users(){
 		echo "OK."
 	fi
 	echo
+
+    echo >> log.txt
+    echo "`date`" >> log.txt
+    echo "Show users in system via MANDY, entry \"users\"." >> log.txt
+    echo "Commands Executed: cat /etc/passwd | grep -e \"bash\"" >> log.txt
+    echo >> log.txt
 }

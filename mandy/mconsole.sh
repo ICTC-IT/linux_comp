@@ -72,6 +72,8 @@ source functions/secure_user_pass.sh
 #shopt -s expand_aliases
 
 clear
+echo > log.txt
+echo "MANDY LOG MESSAGES: " >> log.txt
 
 ## PROMPT CALL
 prompt
@@ -160,6 +162,9 @@ run_case(){
 			echo "Exiting Mandy"
 			echo
 			else
+			echo >> log.txt
+			echo "Entry not found: returned to console." >> log.txt
+			echo >> log.txt
 			echo
 			fi
 			;;

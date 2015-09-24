@@ -13,4 +13,10 @@ show_space(){
 	df
 	printf "${NC}"
 	echo
+
+    echo >> log.txt
+    echo "`date`" >> log.txt
+    echo "Views free disk space via MANDY, entry \"space\"." >> log.txt
+    echo "Commands Executed: df" >> log.txt
+    echo >> log.txt
 }

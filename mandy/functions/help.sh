@@ -51,4 +51,11 @@ help_info(){
 	echo
 	printf "${CYAN}editsudoremove${NC}: remove specified 5 users from the sudo group \n"
 	echo
+
+	## LOG UPDATER
+    echo >> log.txt
+    echo "`date`" >> log.txt
+    echo "Listed all functions in MANDY, entry \"help\"." >> log.txt
+    echo "Commands Executed: echo" >> log.txt
+    echo >> log.txt
 }

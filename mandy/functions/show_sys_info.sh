@@ -20,4 +20,11 @@ show_sys_info(){
 	echo "Host Name: `uname -m`"
 	echo "Operating System: `uname -o`"
 	echo
+
+    echo >> log.txt
+    echo "`date`" >> log.txt
+    echo "Displays system info via MANDY, entry \"update\"." >> log.txt
+    echo "Commands Executed: echo" >> log.txt
+    echo "Commands Executed: uname OPTION_VAR" >> log.txt
+    echo >> log.txt
 }

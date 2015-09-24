@@ -23,6 +23,13 @@ show_dir(){
 	printf "${YELLOW}Listing long list of directory${NC}: \n"
 	printf "`ls -l $x` \n"
 	echo
+
+    ## LOG UPDATER
+    echo >> log.txt
+    echo "`date`" >> log.txt
+    echo "List all \"long\" and \"all\" list of a directory via MANDY, entry \"directory\"." >> log.txt
+    echo "Commands Executed: ls -a entry_var; ls -l entry_var;" >> log.txt
+    echo >> log.txt
 }
 
 ## IF THE WC IS GREATER THAN 100 OUTPUT TO FILE.TXT
