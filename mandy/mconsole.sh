@@ -67,12 +67,17 @@ source functions/show_group_users.sh
 ## CHANGE USER PASS FUNCTION IMPORT
 source functions/secure_user_pass.sh
 
+## IMPORT LOG VIEW FUNCTION
+source functions/log_view.sh
+
 # SETTING NECESSARY ALIASES
 #alias cdm="cd"
 #shopt -s expand_aliases
 
 clear
 echo > log.txt
+echo > show_directory_output.txt
+echo > log_mesg.txt
 echo "MANDY LOG MESSAGES: " >> log.txt
 
 ## PROMPT CALL
@@ -157,6 +162,9 @@ run_case(){
 			prompt_group
 			conditional_test_group
 			;;
+		"logsee")
+			log_view
+			;;
 		*)
 			if [ "$option" == "exit" ]; then
 			echo "Exiting Mandy"
@@ -183,6 +191,10 @@ add_common_cmd(){
 		;;
 		"pwd")
 			pwd
+			echo
+		;;
+		"mandyhistory")
+			cat log.txt
 			echo
 		;;
 	esac

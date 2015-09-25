@@ -1,16 +1,7 @@
 
 MANDY LOG MESSAGES: 
 
-Thu Sep 24 14:51:07 CDT 2015
+Fri Sep 25 14:56:50 CDT 2015
 Listed all functions in MANDY, entry "help".
 Commands Executed: echo
-
-
-Thu Sep 24 14:51:12 CDT 2015
-View all users of a group via MANDY, entry "groupsee".
-Commands Executed: cat /etc/group
-Commands Executed: cat /etc/group | grep sudo
-
-
-Entry not found: returned to console.
 

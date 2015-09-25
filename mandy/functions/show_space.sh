@@ -8,11 +8,11 @@ YELLOW='\033[0;33m'
 GREEN='\033[0;32m'
 
 show_space(){
-	printf "${YELLOW}Listing free disk space${NC}: \n"
-	printf "${RED}"
-	df
-	printf "${NC}"
-	echo
+    printf "${YELLOW}Listing free disk space${NC}: \n"
+    printf "${RED} \n"
+    df
+    printf "${NC}"
+    echo
 
     echo >> log.txt
     echo "`date`" >> log.txt
