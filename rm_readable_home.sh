@@ -4,6 +4,7 @@
 rm_readable_home_dir(){
 	
 	# PROMPT AND ENTRIES
+	echo
 	echo "Enter users to remove world readable permssions "
 	echo "(five entries total, type \"done\" for blank entries): "
 	read option_one_readable
@@ -74,6 +75,8 @@ rm_readable_home_dir(){
 		fi
 		# END OF CONDITIONAL
 	fi
+
+	echo
 }
 
 # CALL FUNCTION
