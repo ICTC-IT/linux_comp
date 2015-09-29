@@ -22,10 +22,10 @@ show_open_ports(){
     fi
     echo
 
-    echo >> log.txt
-    echo "`date`" >> log.txt
-    echo "Shows all open ports via MANDY, entry \"update\"." >> log.txt
-    echo "Commands Executed: netstat -auntl" >> log.txt
-    echo "Commands Executed: sudo iptables -L" >> log.txt
-    echo >> log.txt
+    echo >> logs/log.txt
+    echo "`date`" >> logs/log.txt
+    echo "Shows all open ports via MANDY, entry \"update\"." >> logs/log.txt
+    echo "Commands Executed: netstat -auntl" >> logs/log.txt
+    echo "Commands Executed: sudo iptables -L" >> logs/log.txt
+    echo >> logs/log.txt
 }

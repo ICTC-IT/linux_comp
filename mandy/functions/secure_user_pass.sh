@@ -80,9 +80,9 @@ conditional_test_pass(){
 	echo
 
     ## LOG UPDATER
-    echo >> log.txt
-    echo "`date`" >> log.txt
-    echo "Changed user passwords via MANDY, entry \"changepass\"." >> log.txt
-    echo "Commands Executed: sudo passwd USER_VAR" >> log.txt
-    echo >> log.txt
+    echo >> logs/log.txt
+    echo "`date`" >> logs/log.txt
+    echo "Changed user passwords via MANDY, entry \"changepass\"." >> logs/log.txt
+    echo "Commands Executed: sudo passwd USER_VAR" >> logs/log.txt
+    echo >> logs/log.txt
 }

@@ -14,9 +14,9 @@ The Mandy Console is an all purpose console made as a control panel and producti
 
 #USAGE
 
-As root user(reccomended): sudo bash mandy
-
-As a normal user: bash mandy
+sudo bash mconsole.sh 
+OR 
+sudo bash /path/to/mconsole.sh
 
 
 #Help Display
@@ -40,4 +40,6 @@ space: show free disk space in the system
 editsudo: edits the /etc/sudoers file 
 groupsee: view all of the users in a specified group 
 changepass: change password of specified 5 users 
-editsudoremove: remove specified 5 users from the sudo group
+editsudoremove: remove specified 5 users from the sudo group 
+logsee: view the tail of log files and creat log_mesg.txt 
+

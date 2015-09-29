@@ -81,9 +81,9 @@ conditional_test_age(){
 	echo
 
     ## LOG UPDATER
-    echo >> log.txt
-    echo "`date`" >> log.txt
-    echo "Removed sudo users via MANDY, entry \"removeage\"." >> log.txt
-    echo "Commands Executed: sudo chage -M 40 USER_VAR" >> log.txt
-    echo >> log.txt
+    echo >> logs/log.txt
+    echo "`date`" >> logs/log.txt
+    echo "Removed sudo users via MANDY, entry \"removeage\"." >> logs/log.txt
+    echo "Commands Executed: sudo chage -M 40 USER_VAR" >> logs/log.txt
+    echo >> logs/log.txt
 }

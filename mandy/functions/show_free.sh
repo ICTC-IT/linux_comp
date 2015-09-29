@@ -16,9 +16,10 @@ show_free(){
 	echo
 
     ## LOG UPDATER
-    echo >> log.txt
-    echo "`date`" >> log.txt
-    echo "List all free RAM via MANDY, entry \"ram\"." >> log.txt
-    echo "Commands Executed: free" >> log.txt
-    echo >> log.txt
+
+    echo >> logs/log.txt
+    echo "`date`" >> logs/log.txt
+    echo "List all free RAM via MANDY, entry \"ram\"." >> logs/log.txt
+    echo "Commands Executed: free" >> logs/log.txt
+    echo >> logs/log.txt
 }

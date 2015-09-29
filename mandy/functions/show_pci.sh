@@ -15,9 +15,9 @@ show_pci(){
 	fi
 	echo
 
-    echo >> log.txt
-    echo "`date`" >> log.txt
-    echo "Views all devices connected by PCI via MANDY, entry \"update\"." >> log.txt
-    echo "Commands Executed: lspci" >> log.txt
-    echo >> log.txt
+    echo >> logs/log.txt
+    echo "`date`" >> logs/log.txt
+    echo "Views all devices connected by PCI via MANDY, entry \"update\"." >> logs/log.txt
+    echo "Commands Executed: lspci" >> logs/log.txt
+    echo >> logs/log.txt
 }

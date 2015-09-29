@@ -34,9 +34,9 @@ help_info(){
     echo
 
 	## LOG UPDATER
-    echo >> log.txt
-    echo "`date`" >> log.txt
-    echo "Listed all functions in MANDY, entry \"help\"." >> log.txt
-    echo "Commands Executed: echo" >> log.txt
-    echo >> log.txt
+    echo >> logs/log.txt
+    echo "`date`" >> logs/log.txt
+    echo "Listed all functions in MANDY, entry \"help\"." >> logs/log.txt
+    echo "Commands Executed: echo" >> logs/log.txt
+    echo >> logs/log.txt
 }

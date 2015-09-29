@@ -25,11 +25,11 @@ show_dir(){
 	echo
 
     ## LOG UPDATER
-    echo >> log.txt
-    echo "`date`" >> log.txt
-    echo "List all \"long\" and \"all\" list of a directory via MANDY, entry \"directory\"." >> log.txt
-    echo "Commands Executed: ls -a entry_var; ls -l entry_var;" >> log.txt
-    echo >> log.txt
+    echo >> logs/log.txt
+    echo "`date`" >> logs/log.txt
+    echo "List all \"long\" and \"all\" list of a directory via MANDY, entry \"directory\"." >> logs/log.txt
+    echo "Commands Executed: ls -a entry_var; ls -l entry_var;" >> logs/log.txt
+    echo >> logs/log.txt
 }
 
 ## IF THE WC IS GREATER THAN 100 OUTPUT TO FILE.TXT
@@ -39,20 +39,20 @@ line_count_condition(){
 	counter_c=$((counter_a+counter_l))
 
 	if [ $counter_c -ge 50 ]; then
-		printf "${YELLOW}Output greater than or equal to 50 lines, output will also be in show_directory_output.txt${NC}: \n"
-		echo > show_directory_output.txt
-		echo "ALL LIST OF DIRECTORY: " >> show_directory_output.txt
-		echo "`ls -a $x`" >> show_directory_output.txt
-		echo >> show_directory_output.txt
+		printf "${YELLOW}Output greater than or equal to 50 lines, output will also be in show_directory_output.txt in the logs folder${NC}: \n"
+		echo > logs/show_directory_output.txt
+		echo "ALL LIST OF DIRECTORY: " >> logs/show_directory_output.txt
+		echo "`ls -a $x`" >> logs/show_directory_output.txt
+		echo >> logs/show_directory_output.txt
 
-		echo "LONG LIST OF DIRECTORY: " >> show_directory_output.txt
-		echo "`ls -l $x`" >> show_directory_output.txt
-		echo >> show_directory_output.txt
+		echo "LONG LIST OF DIRECTORY: " >> logs/show_directory_output.txt
+		echo "`ls -l $x`" >> logs/show_directory_output.txt
+		echo >> logs/show_directory_output.txt
 
 		printf "${YELLOW}View the file now (y/n)?${NC} \n"
 		read read_file
 		if [ $read_file = "y" ]; then 
-			gedit show_directory_output.txt
+			gedit logs/show_directory_output.txt
 		else
 			echo "OK."
 		fi

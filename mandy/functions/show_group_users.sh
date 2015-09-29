@@ -22,10 +22,10 @@ show_group_users(){
 	printf "${RED}`cat /etc/group | grep $option_group`${NC} \n"
 	echo
 
-    echo >> log.txt
-    echo "`date`" >> log.txt
-    echo "View all users of a group via MANDY, entry \"groupsee\"." >> log.txt
-    echo "Commands Executed: cat /etc/group" >> log.txt
-    echo "Commands Executed: cat /etc/group | grep $option_group" >> log.txt
-    echo >> log.txt
+    echo >> logs/log.txt
+    echo "`date`" >> logs/log.txt
+    echo "View all users of a group via MANDY, entry \"groupsee\"." >> logs/log.txt
+    echo "Commands Executed: cat /etc/group" >> logs/log.txt
+    echo "Commands Executed: cat /etc/group | grep $option_group" >> logs/log.txt
+    echo >> logs/log.txt
 }

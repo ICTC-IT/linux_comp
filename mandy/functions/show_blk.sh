@@ -16,9 +16,9 @@ show_blk(){
 	echo
 
     ## LOG UPDATER
-    echo >> log.txt
-    echo "`date`" >> log.txt
-    echo "List all block devices via MANDY, entry \"block\"." >> log.txt
-    echo "Commands Executed: lsblk -l" >> log.txt
-    echo >> log.txt
+    echo >> logs/log.txt
+    echo "`date`" >> logs/log.txt
+    echo "List all block devices via MANDY, entry \"block\"." >> logs/log.txt
+    echo "Commands Executed: lsblk -l" >> logs/log.txt
+    echo >> logs/log.txt
 }

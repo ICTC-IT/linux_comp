@@ -69,10 +69,10 @@ delete_user(){
 	echo
 
     ## LOG UPDATER
-    echo >> log.txt
-    echo "`date`" >> log.txt
-    echo "Removed users via MANDY, entry \"removeuser\"." >> log.txt
-    echo "Commands Executed: sudo userdel USER_VAR" >> log.txt
-    echo >> log.txt
+    echo >> logs/log.txt
+    echo "`date`" >> logs/log.txt
+    echo "Removed users via MANDY, entry \"removeuser\"." >> logs/log.txt
+    echo "Commands Executed: sudo userdel USER_VAR" >> logs/log.txt
+    echo >> logs/log.txt
 }
 

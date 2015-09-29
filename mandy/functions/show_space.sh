@@ -14,9 +14,9 @@ show_space(){
     printf "${NC}"
     echo
 
-    echo >> log.txt
-    echo "`date`" >> log.txt
-    echo "Views free disk space via MANDY, entry \"space\"." >> log.txt
-    echo "Commands Executed: df" >> log.txt
-    echo >> log.txt
+    echo >> logs/log.txt
+    echo "`date`" >> logs/log.txt
+    echo "Views free disk space via MANDY, entry \"space\"." >> logs/log.txt
+    echo "Commands Executed: df" >> logs/log.txt
+    echo >> logs/log.txt
 }

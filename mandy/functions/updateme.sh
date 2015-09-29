@@ -28,10 +28,10 @@ update_sys(){
 	fi
 
     ## LOG UPDATER
-    echo >> log.txt
-    echo "`date`" >> log.txt
-    echo "Updates the system via MANDY, entry \"update\"." >> log.txt
-    echo "Commands Executed: sudo apt-get --yes --force-yes update" >> log.txt
-    echo "Commands Executed: sudo apt-get --yes --force-yes upgrade" >> log.txt
-    echo >> log.txt
+    echo >> logs/log.txt
+    echo "`date`" >> logs/log.txt
+    echo "Updates the system via MANDY, entry \"update\"." >> logs/log.txt
+    echo "Commands Executed: sudo apt-get --yes --force-yes update" >> logs/log.txt
+    echo "Commands Executed: sudo apt-get --yes --force-yes upgrade" >> logs/log.txt
+    echo >> logs/log.txt
 }

@@ -1,8 +1,13 @@
 #!/bin/bash
 
+# SET MANDY DIRECTORY VARIABLE/CHANGE DIRECTORY TO PARENT PATH
+mandy_dir=$( cd "$(dirname "${BASH_SOURCE}")" ; pwd -P )
+cd "$mandy_dir"
+
+chmod a+x *.sh
+chmod a+x functions/*.sh
 
 # IMPORTS
-
 
 ## PROMPT IMPORT
 source functions/prompt.sh
@@ -75,10 +80,10 @@ source functions/log_view.sh
 #shopt -s expand_aliases
 
 clear
-echo > log.txt
-echo > show_directory_output.txt
-echo > log_mesg.txt
-echo "MANDY LOG MESSAGES: " >> log.txt
+echo > $mandy_dir/logs/log.txt
+echo > $mandy_dir/logs/show_directory_output.txt
+echo > $mandy_dir/logs/log_mesg.txt
+echo "MANDY LOG MESSAGES: " >> $mandy_dir/logs/log.txt
 
 ## PROMPT CALL
 prompt
@@ -170,9 +175,9 @@ run_case(){
 			echo "Exiting Mandy"
 			echo
 			else
-			echo >> log.txt
-			echo "Entry not found: returned to console." >> log.txt
-			echo >> log.txt
+			echo >> logs/log.txt
+			echo "Entry not found: returned to console." >> logs/log.txt
+			echo >> logs/log.txt
 			echo
 			fi
 			;;

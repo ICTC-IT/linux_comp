@@ -14,18 +14,18 @@ set_ufw_enable(){
 		echo "using version: "
 		printf "${RED}`sudo ufw --version`${NC} \n"
 		echo "OK."
-	fi
+fi
 	echo
-    echo >> log.txt
-    echo "`date`" >> log.txt
-    echo "Enables and configures ufw firewall via MANDY, entry \"setufw\"." >> log.txt
-    echo "Commands Executed: sudo ufw enable" >> log.txt
-    echo "Commands Executed: sudo ufw default deny" >> log.txt
-    echo "Commands Executed: sudo ufw deny in http" >> log.txt
-    echo "Commands Executed: sudo ufw deny in smtp" >> log.txt
-    echo "Commands Executed: sudo ufw allow in 80" >> log.txt
-    echo "Commands Executed: sudo ufw allow in 22" >> log.txt
-    echo >> log.txt
+    echo >> logs/log.txt
+    echo "`date`" >> logs/log.txt
+    echo "Enables and configures ufw firewall via MANDY, entry \"setufw\"." >> logs/log.txt
+    echo "Commands Executed: sudo ufw enable" >> logs/log.txt
+    echo "Commands Executed: sudo ufw default deny" >> logs/log.txt
+    echo "Commands Executed: sudo ufw deny in http" >> logs/log.txt
+    echo "Commands Executed: sudo ufw deny in smtp" >> logs/log.txt
+    echo "Commands Executed: sudo ufw allow in 80" >> logs/log.txt
+    echo "Commands Executed: sudo ufw allow in 22" >> logs/log.txt
+    echo >> logs/log.txt
 	}
 
 set_ufw_ruleset(){
