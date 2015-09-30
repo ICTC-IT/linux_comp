@@ -23,7 +23,7 @@ show_sys_info(){
 
     echo >> logs/log.txt
     echo "`date`" >> logs/log.txt
-    echo "Displays system info via MANDY, entry \"update\"." >> logs/log.txt
+    echo "Displays system info via MANDY, entry \"show\"." >> logs/log.txt
     echo "Commands Executed: echo" >> logs/log.txt
     echo "Commands Executed: uname OPTION_VAR" >> logs/log.txt
     echo >> logs/log.txt
