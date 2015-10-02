@@ -30,6 +30,15 @@ home_scan(){
 	#		echo "suspicious hidden file found in \"$scanned_dir\"."
 	#	fi
 	#done
+
+	# TEST FOR USERE PERM TO DELETE FILES
+	echo
+	echo "would you like to delete the files (y/n)?"
+	read del_file_option
+	if [ $del_file_option = "y" ]; then
+		rm -f $i
+	fi
+	
 }
 
 home_scan
