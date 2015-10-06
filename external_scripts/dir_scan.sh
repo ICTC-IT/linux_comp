@@ -1,45 +1,52 @@
 #!/bin/bash
 
+# COLOR VARIABLES
+RED='\033[0;31m'
+NC='\033[0m'
+CYAN='\033[0;36m'
+YELLOW='\033[0;33m'
+GREEN='\033[0;32m'
+
 # SCAN FUNCTION
-home_scan(){
+array_scan(){
 	echo "Enter a directory to be scanned: "
 	read scanned_dir
 	
 	# ARRAY DICTIONARY/SCANNED FILE NAMES
-	list_arr=("passwords" "passwords.txt" "Passwords" "Passwords.txt" 
-	"pass" "pass.txt" "credit" "credit.txt" "cards" "cards.txt" "accounts"
-	"accounts.txt")
+	list_arr=("passwords" "bank" "pass" "credit" "cards" 
+	"accounts" "Passwords" "creditcards" "creditcardinfo" "bankpasswords" "keylog" 
+	"keylogger" "rootkit")
 	
-	echo "Searching input directory: "
+	echo "Searching input directory for dictionary file titles: "
 	echo
 	for i in "${list_arr[@]}"; do
+		if [ ! -d $scanned_dir ]; then
+			echo "The directory you entered is invalid."
+			break
+		fi
 		# SEARCH FOR REGULAR FILES
-		if [ -f $scanned_dir/$i\.* ]; then
-			echo "suspicious file found in \"$scanned_dir\" file named \"$i\"."
+		if [ -e $scanned_dir/$i\.* ]; then
+			printf "${YELLOW}$i${NC}: ${RED}FOUND${NC} \n"
+		fi
+
+		if [ ! -e $scanned_dir/$i\.* ]; then
+			printf "${YELLOW}$i${NC}: ${GREEN}CLEAR${NC} \n"
 		fi
 	done
-
-	# COMMENTING OUT UNTIL FIXED/FINISHED
-	#echo
-	#echo "Going through hidden files: "
-	#echo
-
-	#for i in "${list_arr[@]}"; do
-		# SEARCH FOR HIDDEN FILES
-	#	if [ -f $scanned_dir/.$i.* ]; then
-	#		echo "suspicious hidden file found in \"$scanned_dir\"."
-	#	fi
-	#done
-
-	# TEST FOR USERE PERM TO DELETE FILES
 	echo
-	echo "would you like to delete the files (y/n)?"
-	read del_file_option
-	if [ $del_file_option = "y" ]; then
-		rm -f $i
-	fi
-	
 }
 
-home_scan
+executable_scan(){
+	# FIND TYPES OF FILES
+	echo "Finding executable files in directory: "
+	if (find $scanned_dir \( -type d ! -name . -prune \) -o \( -executable -type f \)); then
+		echo "OK."
+	fi
+	echo
+}
+
+
+
+array_scan
+executable_scan
 
